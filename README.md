@@ -18,5 +18,9 @@ report it as a newly introduced issue (PR scan only reports diff-introduced vuln
 - `.github/workflows/frogbot-scan-repository.yml` — full-repo scan on `main`
 - `.github/workflows/frogbot-scan-pull-request.yml` — diff scan on PRs
 
-Scanner settings come from the repo-local config (not a central Config Profile), so the
-monorepo `workingDirs` are respected.
+Scanner settings use the platform **System_Default_Profile** (auto-selected). The repo-local
+`.frogbot/frogbot-config.yml` documents the monorepo `workingDirs` layout.
+
+**Note:** The first repository scan auto-registers the repo on the JFrog tenant. If a follow-up
+scan fails with `profile returned with 0 modules`, delete the broken profile via
+`POST /xray/api/v1/xsc/profile/reset` with the `config_profile_id`.
