@@ -1,8 +1,8 @@
 # frogbot-monorepo-demo
 
-Private monorepo demo for **Frogbot V3** against `https://tokyoshiftleft.jfrog.io/`.
+Public monorepo demo for **Frogbot V3** against `https://tokyoshiftleft.jfrog.io/`.
 
-> **Public repo** — required for GitHub Security tab + Dependency Graph on a personal account
+> Repo is **public** so GitHub Code Scanning + Dependency Graph work on a personal account
 > (private repos need GitHub Advanced Security). See [GitHub Security integration](#github-security) below.
 
 Two sub-projects, each with seeded CVEs on `main`:
@@ -43,3 +43,6 @@ on `main` so npm SBOM resolves; JFrog Advanced Security license on the tenant fo
 
 After a scan, filter alerts by tool: **JFrog Xray scanner**, **JFrog SAST**, **JFrog Secrets scanner**.
 Use `branch:main` for repository scans or `pr:<number>` for pull request scans.
+
+Enable vulnerability alerts on the repo for Dependency Graph SBOM upload
+(`PUT /repos/{owner}/{repo}/vulnerability-alerts`).
