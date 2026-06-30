@@ -27,3 +27,5 @@ jobs:
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JF_GIT_BASE_BRANCH: ${{ matrix.branch }}
           JF_USE_LOCAL_REPOSITORY: true
+          # Monorepo layout lives in .frogbot/frogbot-config.yml — do not use platform profile.
+          JF_USE_CONFIG_PROFILE: "FALSE"
