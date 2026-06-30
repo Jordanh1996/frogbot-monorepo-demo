@@ -27,5 +27,3 @@ jobs:
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JF_GIT_BASE_BRANCH: ${{ matrix.branch }}
           JF_USE_LOCAL_REPOSITORY: true
-          JF_USE_CONFIG_PROFILE: "TRUE"
-          JF_CONFIG_PROFILE: System_Default_Profile
